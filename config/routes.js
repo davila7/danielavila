@@ -35,7 +35,15 @@ module.exports.routes = {
   '/': {
     view: 'home',
   },
-  'get /singin':{ view: 'singin' }  
+  'get /singin': { 
+    view: 'singin' 
+  },
+  'user': {
+      'new': true,
+      index: 'sessionAuth',
+      '*': true
+  }
+
 
   /***************************************************************************
   *                                                                          *
