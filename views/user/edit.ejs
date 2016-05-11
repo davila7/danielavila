@@ -1,15 +1,20 @@
-<form action="/user/update/<%= user.id %>" method="POST" class="form-signin">
-            <h2 class="form-signin-heading"> Editar Usuario </h2>
-            <div class="control-group"> 
-            <input type="text" value="<%= user.firstname %>" class="form-control" placeholder="Primer Nombre" name="firstname">
-            </div>
-            <div class="control-group">
-                  <input type="text" value="<%= user.lastname %>" class="form-control" placeholder="Apellidos" name="lastname">
-            </div>
-            <div class="control-group">
-                  <input type="text" value="<%= user.email %>" class="form-control" placeholder="Email" name="email">
-            </div>
-            <br/>
-                  <input type="submit" class="btn btn-lg btn-primary btn-block" value="Editar User"/>
-                  <input type="hidden" name="_csrf" value="<%=_csrf %>"/>
-</form>
+<div class="row">
+      <div class="col-sm-12">
+      <a href="/user" class="btn btn-info pull-right">Usuarios</a>
+            <form action="/user/update/<%= user.id %>" method="POST" class="form-signin">
+                  <h2 class="form-signin-heading"> Editar Usuario </h2>
+                  <div class="control-group"> 
+                  <input type="text" value="<%= user.firstname %>" class="form-control" placeholder="Primer Nombre" name="firstname">
+                  </div>
+                  <div class="control-group">
+                        <input type="text" value="<%= user.lastname %>" class="form-control" placeholder="Apellidos" name="lastname">
+                  </div>
+                  <div class="control-group">
+                        <input type="text" value="<%= user.email %>" class="form-control" placeholder="Email" name="email">
+                  </div>
+                  <br/>
+                        <input type="submit" class="btn btn-lg btn-primary btn-block" value="Editar User"/>
+                        <input type="hidden" name="_csrf" value="<%=_csrf %>"/>
+            </form>
+      </div>
+</div>
